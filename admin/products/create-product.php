@@ -6,7 +6,7 @@ require_once "../../classes.php";
 session_start();
 
 if (!isset($_SESSION['user']) ||  $_SESSION['user']['admin'] == false) {
-    header("Location: /store-project/auth/login.php");
+    header("Location: /auth/login.php");
     exit();
 }
 
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $imagePath
             )) {
 
-                $image = "/store-project/images/products/" . $newFileName;
+                $image = "/images/products/" . $newFileName;
 
             } else {
 

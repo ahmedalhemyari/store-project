@@ -8,7 +8,7 @@ session_start();
 
 
 if (!isset($_SESSION['user']) || $_SESSION['user']['admin'] == false) {
-    header("Location: /store-project/auth/login.php");
+    header("Location: /auth/login.php");
     exit();
 }
 
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         Create User
                     </h2>
 
-                    <a href="/store-project/admin/users/users-table.php"
+                    <a href="/admin/users/users-table.php"
                        class="btn btn-outline-secondary rounded-pill px-4">
                         &larr; Back to Users
                     </a>
@@ -214,7 +214,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <div class="d-flex justify-content-end gap-2 pt-2">
 
-                            <a href="/store-project/admin/users/users-table.php"
+                            <a href="/admin/users/users-table.php"
                                class="btn btn-light rounded-pill px-4">
                                 Cancel
                             </a>
